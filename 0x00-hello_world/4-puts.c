@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * A function that prints a string
+/**
+ * main - A function that prints a string
  */
 int main(void)
 {
