@@ -12,7 +12,7 @@ int main(void)
 	while (*message1 != '\0')
 		putc(*(message1++), stdout);
 	while (*message2 != '\0')
-		putc(*(message2++), stdout);		
+		putc(*(message2++), stdout);
 
 	return (1);
 }
