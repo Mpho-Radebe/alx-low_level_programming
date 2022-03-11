@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int first, second, third;
+	int first, second;
 
 	for (first = '0'; first <= '8'; first++)
 	{
