@@ -8,6 +8,7 @@ void print_to_98(int n)
 {
 	int increment = 0, numberDigits;
 	int i, j, temp1, temp2;
+	
 	increment = 1;
 	if (n > 98)
 		increment = -1;
@@ -34,7 +35,7 @@ void print_to_98(int n)
 			_putchar('0' + temp2 % 10);
 			temp2 /= 10;
 		}
-		for (j = 0; j < numberDigits;j++)
+		for (j = 0; j < numberDigits; j++)
 			_putchar('0');
 
 		_putchar(',');
