@@ -1,4 +1,4 @@
-#include "main.h"	
+#include "main.h"
 
 /**
  * print_to_98 - prints all natural numbers from n to 98
@@ -8,7 +8,7 @@ void print_to_98(int n)
 {
 	int increment = 0, numberDigits;
 	int i, j, temp1, temp2;
-	
+
 	increment = 1;
 	if (n > 98)
 		increment = -1;
