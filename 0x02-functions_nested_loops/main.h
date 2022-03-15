@@ -1,3 +1,3 @@
 void _putchar(char* message);
-void print_alphabet(void)
+void print_alphabet(void);
   
