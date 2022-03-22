@@ -2,11 +2,11 @@
  * rev_string - reverses a string
  * @s: the string
  */
-void rev_string(char* s)
+void rev_string(char *s)
 {
 	char temp;
-	char* left = s;
-	char* right = s;
+	char *left = s;
+	char *right = s;
 
 
 	while (*right != '\0')
