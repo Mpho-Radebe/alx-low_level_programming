@@ -11,7 +11,7 @@ int _atoi(char *s)
 	int positive = 1;
 
 	if (strcmp("-2147483648", s) == 0)
-		return -2147483648;
+		return (-2147483648);
 
 	while (*s != '\0' && !(*s >= '0' && *s <= '9'))
 	{
