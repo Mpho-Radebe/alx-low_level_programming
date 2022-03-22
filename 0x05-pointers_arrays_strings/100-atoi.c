@@ -15,7 +15,7 @@ int _atoi(char *s)
 			positive = !positive;
 		s++;
 	}
-	
+
 	if (positive)
 		return (atoi(s));
 	else
