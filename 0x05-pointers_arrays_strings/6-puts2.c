@@ -6,13 +6,12 @@
  */
 void puts2(char *str)
 {
-	str--;
-	while (*(str++) != '\0')
+	while (*str != '\0')
 	{
-		if (*str != '\0')
-		{
-			putchar(*str);
-			str++;
-		}
+		putchar(*str);
+		str++;
+		if (*str == '\0')
+			break;
+		str++;
 	}
 }
