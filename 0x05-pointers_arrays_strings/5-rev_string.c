@@ -12,6 +12,7 @@ void rev_string(char* s)
 	while (*right != '\0')
 		right++;
 
+	right--;
 	while (right > left)
 	{
 		temp = *right;
