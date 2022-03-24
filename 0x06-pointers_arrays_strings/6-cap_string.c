@@ -23,6 +23,7 @@ char *cap_string(char *str)
 			{
 			case ' ':
 			case '\t':
+			case '\h':
 			case '\n':
 			case ',':
 			case ';':
