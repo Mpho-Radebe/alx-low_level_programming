@@ -7,6 +7,9 @@
  */
 char *cap_string(char *str)
 {
+	if (*str == '\0')
+		return (str);
+
 	char *currChar = str + 1;
 	const int LOWER_UPPER_CASE_DIFF = 'a' - 'A';
 
