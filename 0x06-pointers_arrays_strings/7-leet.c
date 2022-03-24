@@ -17,7 +17,7 @@ char *leet(char *str)
 
 	while ((c = tolower(str[i])) != '\0')
 	{
-		if (c == 'a' || c == 'e' || c == 'o' || c == 't' || 'l')
+		if (c == 'a' || c == 'e' || c == 'o' || c == 't' || c == 'l')
 			str[i] = '0' + digit[c - 'a'];
 		i++;
 	}
