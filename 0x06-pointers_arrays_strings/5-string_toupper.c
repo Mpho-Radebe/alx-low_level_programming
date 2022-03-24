@@ -10,6 +10,7 @@ char *string_toupper(char *str)
 	{
 		if (*currChar >= 'a' && *currChar <= 'z')
 			*currChar -= LOWER_UPPER_CASE_DIFF;
+		currChar++;
 	}
 
 	return (str);
