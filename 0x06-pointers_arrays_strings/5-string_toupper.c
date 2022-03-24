@@ -1,5 +1,7 @@
 /**
  * string_toupper - changes all lowercase letters to uppercase
+ * @str: string
+ * Return: string
  */
 char *string_toupper(char *str)
 {
