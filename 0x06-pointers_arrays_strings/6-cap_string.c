@@ -13,7 +13,7 @@ char *cap_string(char *str)
 	if (*str == '\0')
 		return (str);
 
-	currChar = str + 1;
+	currChar = str;
 
 	while (*currChar != '\0')
 	{
