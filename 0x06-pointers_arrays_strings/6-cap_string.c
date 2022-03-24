@@ -7,11 +7,13 @@
  */
 char *cap_string(char *str)
 {
+	char *currChar;
+	const int LOWER_UPPER_CASE_DIFF = 'a' - 'A';
+
 	if (*str == '\0')
 		return (str);
 
-	char *currChar = str + 1;
-	const int LOWER_UPPER_CASE_DIFF = 'a' - 'A';
+	currChar = str + 1;
 
 	while (*currChar != '\0')
 	{
