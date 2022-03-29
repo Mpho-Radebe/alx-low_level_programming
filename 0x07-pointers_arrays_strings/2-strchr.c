@@ -3,7 +3,7 @@
 
 /**
  * _strchr - locates a character in a string
- * @s: sring
+ * @s: string
  * @c: character
  * Return: a pointer
  */
