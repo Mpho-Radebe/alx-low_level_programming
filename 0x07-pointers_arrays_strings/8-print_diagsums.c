@@ -20,6 +20,6 @@ void print_diagsums(int *a, int size)
 	sum = 0;
 	for (i = 0, j = size - 1; i < size && j >= 0; i++, j--)
 		sum += a[size * i + j];
-	
+
 	printf("%d\n", sum);
 }
