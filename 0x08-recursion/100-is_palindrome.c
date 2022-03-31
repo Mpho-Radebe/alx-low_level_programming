@@ -23,5 +23,5 @@ int is_palindrome_recursion(char *s, int left, int right)
  */
 int is_palindrome(char *s)
 {
-	return (is_palindrome_recursion(s, 0, strlen(s) - 1)); 
+	return (is_palindrome_recursion(s, 0, strlen(s) - 1));
 }
