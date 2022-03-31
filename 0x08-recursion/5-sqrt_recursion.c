@@ -8,6 +8,8 @@
  */
 long sqrt_fun(long n, long m)
 {
+	if (n == 1)
+		return (1);
 	if (m >= n / 2)
 		return (-1);
 	else if (m * m == n)
