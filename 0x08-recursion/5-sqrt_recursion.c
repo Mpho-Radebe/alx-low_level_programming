@@ -1,8 +1,7 @@
 #include "main.h"
 
-
 /**
- * sqrt - returns square root of a number
+ * sqrt_fun - returns square root of a number
  * @n: the number1
  * @m: the number2
  * Return: the square root
@@ -14,7 +13,7 @@ int sqrt_fun(int n, int m)
 	else if (m * m == n)
 		return (m);
 	else
-		return sqrt_fun(n, m - 1);
+		return (sqrt_fun(n, m + 1));
 }
 
 /**
@@ -24,5 +23,5 @@ int sqrt_fun(int n, int m)
  */ 
 int _sqrt_recursion(int n)
 {
-	return sqrt_fun(n, 1);
+	return (sqrt_fun(n, 1));
 }
