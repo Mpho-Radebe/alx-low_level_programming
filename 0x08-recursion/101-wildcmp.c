@@ -30,7 +30,9 @@ int wildcmp(char *s1, char *s2)
 				wildchar = s2;
 				nowildchar = s1;
 			}
-			if (*nowildchar == '\0')
+			if (*(wildchar + 1) == '*')
+				wildchar++;
+			else if (*nowildchar == '\0')
 				wildchar++;
 			else if (*(wildchar + 1) == *nowildchar)
 				wildchar++;
