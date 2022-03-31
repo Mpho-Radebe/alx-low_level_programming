@@ -7,19 +7,12 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i;
-
-	if (n == 1)
-		return (1);
-
-	i = 0;
-	 
-	aa:
-		if (i * i == n)
-			return (i);
-		i++;
-		if (i >= n / 2)
-			goto aa;
-
-	return (-1);
+	static int calls = 1;
+	
+	if (calls >= n)
+		return (-1);
+	else if (calls * calls == n)
+		return calls;
+	calls--;
+	return _sqrt_recursion(n);
 }
