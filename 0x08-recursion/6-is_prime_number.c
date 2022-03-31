@@ -23,7 +23,7 @@ int isPrime(int n, int m)
  * @n: the number
  * Return: something
  */
- int is_prime_number(int n)
- {
+int is_prime_number(int n)
+{
 	return (isPrime(n, 2));
- }
+}
