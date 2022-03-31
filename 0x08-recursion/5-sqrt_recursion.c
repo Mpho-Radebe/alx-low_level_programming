@@ -1,18 +1,28 @@
 #include "main.h"
 
+
+/**
+ * sqrt - returns square root of a number
+ * @n: the number1
+ * @m: the number2
+ * Return: the square root
+ */ 
+int sqrt_fun(int n, int m)
+{
+	if (m >= n / 2)
+		return (-1);
+	else if (m * m == n)
+		return (m);
+	else
+		return sqrt_fun(n, m - 1);
+}
+
 /**
  * _sqrt_recursion - calculate the square root of a number
  * @n: the number
  * Return: the square root of a number
- */
+ */ 
 int _sqrt_recursion(int n)
 {
-	static int calls = 1;
-	
-	if (calls >= n)
-		return (-1);
-	else if (calls * calls == n)
-		return calls;
-	calls--;
-	return _sqrt_recursion(n);
+	return sqrt_fun(n, 1);
 }
