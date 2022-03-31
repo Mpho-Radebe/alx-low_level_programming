@@ -12,11 +12,14 @@ int _sqrt_recursion(int n)
 	if (n == 1)
 		return (1);
 
-	for (i = 0; i < n / 2; i++)
-	{
+	i = 0;
+	 
+	loop:
 		if (i * i == n)
 			return (i);
-	}
+		i++;
+		if (i >= n / 2)
+			goto loop;
 
 	return (-1);
 }
