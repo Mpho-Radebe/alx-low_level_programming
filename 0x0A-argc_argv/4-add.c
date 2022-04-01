@@ -8,7 +8,7 @@
  * @argv: argument vector
  * Return: always 0
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	long unsigned int i, j;
 	int sum = 0;
@@ -31,9 +31,9 @@ int main(int argc, char* argv[])
 		}
 
 		sum += atoi(argv[i]);
-	}		
+	}
 
 	printf("%d\n", sum);
-	
+
 	return (0);
 }
