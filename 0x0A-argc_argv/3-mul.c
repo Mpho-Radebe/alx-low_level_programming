@@ -4,7 +4,7 @@
 /**
  * main - main function
  * @argc: arguments count
- * @argc: argument vector
+ * @argv: argument vector
  * Return: success - 0, or failure - 1
  */
 int main(int argc, char *argv[])
