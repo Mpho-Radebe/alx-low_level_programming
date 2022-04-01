@@ -6,7 +6,6 @@
  * @s2: string 2
  * Return: 1 Or 0
  */
-
 int wildcmp(char *s1, char *s2)
 {
 	char *wildchar, *nowildchar;
