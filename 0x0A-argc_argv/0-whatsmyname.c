@@ -9,6 +9,8 @@
  */
 int main(int argc, char* argv[])
 {
+	if (argc < 0)
+		puts("");
 	puts(argv[0]);
 	return (0);
 }
