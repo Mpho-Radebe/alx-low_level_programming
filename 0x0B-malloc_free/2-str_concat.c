@@ -6,7 +6,7 @@ char *str_concat(char *s1, char *s2){
 	char *concat_str;
 	unsigned int s1_size = 0;
 	unsigned int s2_size = 0;
-	int i;
+	unsigned int i;
 
 	if (s1 != NULL)
 		s1_size += strlen(s1);
