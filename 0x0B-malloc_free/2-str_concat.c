@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *str_concat(char *s1, char *s2){
+/**
+ * str_concat - concatenates strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: a pointer
+ */
+char *str_concat(char *s1, char *s2)
+{
 	char *concat_str;
 	unsigned int s1_size = 0;
 	unsigned int s2_size = 0;
