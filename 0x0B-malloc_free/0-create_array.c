@@ -16,7 +16,7 @@ char *create_array(unsigned int size, char c)
 	if (charPtr == NULL)
 	{
 		fprintf(stderr, "Not enough memory left!\n");
-		return (1);
+		exit(1);
 	}
 
 	for (i = 0; i < size; i++)
