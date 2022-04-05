@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	if (concat_str == NULL)
 	{
 		fprintf(stderr, "failed memory allocation");
-		return NULL;
+		return (NULL);
 	}
 
 	concat_str[s1_size + s2_size] = '\0';
@@ -35,5 +35,5 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < s2_size; i++)
 		concat_str[s1_size + i] = s2[i];
 
-	return concat_str;
+	return (concat_str);
 }
