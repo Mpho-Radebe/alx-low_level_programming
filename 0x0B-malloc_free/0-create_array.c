@@ -10,7 +10,7 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i ;
-	char *charPtr = (char*) malloc(size * sizeof(char));
+	char *charPtr = malloc(size * sizeof(char));
 
 	for (i = 0; i < size; i++)
 		charPtr[i] = c;
