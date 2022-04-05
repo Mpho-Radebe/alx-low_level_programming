@@ -13,6 +13,12 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 	char *charPtr = malloc(size * sizeof(char));
 
+	if (size <= 0)
+	{
+		printf("failed to allocate memory");
+		exit(1);
+	}
+
 	if (charPtr == NULL)
 	{
 		fprintf(stderr, "Not enough memory left!\n");
