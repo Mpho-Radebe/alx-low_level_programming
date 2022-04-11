@@ -3,7 +3,6 @@
 #include <string.h>
 
 /**
- * init_dog - initializes a dog
  * @d: the dog
  * @name: name of the dog
  * @age: age of the dog
