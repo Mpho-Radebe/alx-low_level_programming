@@ -15,7 +15,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	if (d == NULL)
 	{
 		fprintf(stderr, "Failed to initialize a dog.");
-		exit(1);
+		return;
 	}
 
 	d->name = malloc(strlen(name) + 1);
