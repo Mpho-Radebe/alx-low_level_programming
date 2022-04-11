@@ -22,10 +22,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		d->name = malloc(strlen(name) + 1);
 		if(d->name == NULL)
-		{
-			fprintf(stderr, "Failed to initialize a dog.");
 			return;
-		}
 		strcpy(d->name, name);
 	}
 
@@ -35,10 +32,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		d->owner = malloc(strlen(owner) + 1);
 		if (d->owner == NULL)
-		{
-			fprintf(stderr, "Failed to initialize a dog.");
 			return;
-		}
 		strcpy(d->owner, owner);
 	}
 }
