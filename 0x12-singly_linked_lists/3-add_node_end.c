@@ -16,15 +16,13 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (head == NULL)
 		return (NULL);
-	
-	if (*head == NULL)
-		return (NULL);
 
 	if (newNode == NULL)
 		return (NULL);
 
 	newNode->len = strlen(str);
 	newNode->str = malloc(sizeof(char) * (newNode->len + 1));
+	newNode->next = NULL;
 
 	if (newNode->str == NULL)
 		return (NULL);
@@ -32,12 +30,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	for (i = 0; i <= newNode->len; i++)
 		newNode->str[i] = str[i];
 
+	if (*head == NULL)
+	{
+		*head = newNode;
+		return (newNode);
+	}
+
 	endNode = *head;
 	while (endNode->next != NULL)
 		endNode = endNode->next;
 
 	endNode->next = newNode;
-	newNode->next = NULL;
-
+	
 	return (newNode);
 }
