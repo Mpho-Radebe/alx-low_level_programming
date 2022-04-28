@@ -8,15 +8,15 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int i;
+	unsigned int i;
 	unsigned int setter = 0x01ul;
 
-	if (index < 0 || n == NULL)
-		return -1;
+	if (n == NULL)
+		return (-1);
 
 	for (i = 0; i < index; i++)
 		setter <<= 1;
 
 	*n |= setter;
-	return 1;
+	return (1);
 }
