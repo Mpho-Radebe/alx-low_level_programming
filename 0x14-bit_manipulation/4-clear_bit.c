@@ -8,11 +8,11 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int i;
+	unsigned int i;
 	unsigned int setter = (~0x00ul) << 1;
 
-	if (index < 0 || n == NULL)
-		return -1;
+	if (n == NULL)
+		return (-1);
 
 	for (i = 0; i < index; i++)
 	{
@@ -21,5 +21,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	}
 
 	*n &= setter;
-	return 1;
+	return (1);
 }
