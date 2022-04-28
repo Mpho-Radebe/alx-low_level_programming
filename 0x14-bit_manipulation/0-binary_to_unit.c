@@ -8,7 +8,6 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int index = 0;
-	int product = 1;
 	unsigned int result = 0;
 	int nextDigit = 1;
 
@@ -17,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (index = 0; b[index] != '\0'; index++)
 	{	
-		if (b[index] != '0' || b[index] != '1')
+		if (b[index] != '0' && b[index] != '1')
 			return 0;
 
 		if (b[index] == '1')
