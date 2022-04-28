@@ -1,6 +1,5 @@
 #include <stddef.h>
 #include <string.h>
-#include <stdio.h>
 
 /**
  * binary_to_uint - converts a number to an integer
@@ -26,5 +25,5 @@ unsigned int binary_to_uint(const char *b)
 		nextDigit *= 2;
 	}
 
-	return result;
+	return (result);
 }
