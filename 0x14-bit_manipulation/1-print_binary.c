@@ -8,8 +8,8 @@ void recursive_print(unsigned long int n)
 {
 	if (n != 0)
 	{
-		print_binary (n >> 1);
-		_putchar('0' + 0x01ul & n);
+		recursive_print (n >> 1);
+		_putchar('0' + (0x01ul & n));
 	}
 }
 
