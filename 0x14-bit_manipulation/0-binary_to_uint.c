@@ -1,4 +1,6 @@
 #include <stddef.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * binary_to_uint - converts a number to an integer
@@ -9,12 +11,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	int index = 0;
 	unsigned int result = 0;
-	int nextDigit = 1;
+	unsigned int nextDigit = 1;
 
 	if (b == NULL)
 		return 0;
 
-	for (index = 0; b[index] != '\0'; index++)
+	for (index = strlen(b) - 1; index >= 0; index--)
 	{	
 		if (b[index] != '0' && b[index] != '1')
 			return 0;
