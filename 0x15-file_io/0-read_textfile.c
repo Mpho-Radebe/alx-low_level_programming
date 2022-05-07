@@ -35,5 +35,5 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	close(fd);
 
-	return bytes_read;
+	return (bytes_read);
 }
