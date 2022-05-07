@@ -20,6 +20,9 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 
+	if (buffer == NULL)
+		retuern (0);
+
 	if (filename == NULL)
 		return (0);
 
