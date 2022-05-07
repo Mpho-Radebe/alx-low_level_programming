@@ -6,6 +6,12 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * read_textfile - reads a file
+ * @filename: the name of the file
+ * @letters: the number of characters to be read
+ * Return: the number
+ */
 size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
@@ -24,7 +30,7 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	bytes_read = read(fd, buffer, letters);
 	write(STDOUT_FILENO, buffer, bytes_read);
-	
+
 	free(buffer);
 
 	close(fd);
