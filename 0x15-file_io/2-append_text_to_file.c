@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 /**
- * create_file - creates a file
+ * append_text_to_file - creates a file
  * @filename: the name of the file
  * @text_content: the content
  * Return: 1 or -1
