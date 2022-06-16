@@ -4,11 +4,10 @@ void read_next_line(FILE *fp, char *str, int max_length, int* endOfFile)
 {
 	int count = 0;
 	char c;
-
-	*endOfFile = 0;
-	
 	int first_space = 1;
 	int first_print = 1;
+
+	*endOfFile = 0;
 	
 	while (1)
 	{

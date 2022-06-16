@@ -4,10 +4,7 @@ int main(int argc, char **argv)
 {
 	FILE *monty_file;
 	stack_t *stack = NULL;
-	const int MAX_INSTR_LENGTH = 50;
-	char instr[MAX_INSTR_LENGTH + 1];
-	char line[MAX_INSTR_LENGTH + 1];
-	char* temp_str;
+	char line[51];
 	int endOfFile;
 	
  	int line_no = 1;
@@ -26,11 +23,10 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	int i = 0;
 	while (1)
 	{
 		line[0] = '\0';
-		read_next_line(monty_file, line, MAX_INSTR_LENGTH, &endOfFile);
+		read_next_line(monty_file, line, 50, &endOfFile);
 		
 		if (line[0] != '\0')
 			execute_monty_instr(&stack, line, line_no);
