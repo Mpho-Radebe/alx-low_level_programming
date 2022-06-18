@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints numbers
+ * print_strings - prints numbers
  * @separator: seperator
  * @n: number
  */
