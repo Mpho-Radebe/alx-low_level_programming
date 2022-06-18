@@ -3,7 +3,7 @@
 
 /**
  * print_numbers - prints numbers
- * @seperator: seperator
+ * @separator: seperator
  * @n: number
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -12,7 +12,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	va_start(ap, n);
-	
+
 	if (n >= 1)
 		printf("%d", va_arg(ap, int));
 
