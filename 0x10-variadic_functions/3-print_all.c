@@ -12,34 +12,43 @@ void print_all(const char * const format, ...)
 	char *nil;
 	char *withnil = "%s%s";
 	int i = 0;
+	int first = 1;
 
 	va_start(ap, format);
-	switch (format[0])
+	
+	while (format[i] != '\0' && first == 1)
 	{
-		case 'c':
-			printf("%c", va_arg(ap, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(ap, int));
-			break;
-		case 'f':
-			printf("%f", va_arg(ap, double));
-			break;
-		case 's':
+		switch (format[0])
 		{
-			tmp_str = va_arg(ap, char *);
-			withnil = "%s%s";
-			nil = "";
-			if (tmp_str == NULL)
+			case 'c':
+				printf("%c", va_arg(ap, int));
+				first = 0;
+				break;
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				first = 0;
+				break;
+			case 'f':
+				printf("%f", va_arg(ap, double));
+				first = 0;
+				break;
+			case 's':
 			{
-				withnil = "%s";
-				nil = "(nil)";
+				first = 0;
+				tmp_str = va_arg(ap, char *);
+				withnil = "%s%s";
+				nil = "";
+				if (tmp_str == NULL)
+				{
+					withnil = "%s";
+					nil = "(nil)";
+				}
+				printf(withnil, nil, tmp_str);
 			}
-			printf(withnil, nil, tmp_str);
 		}
+		i++;
 	}
 
-	i++;
 	while (format[i] != '\0')
 	{
 		switch (format[i])
