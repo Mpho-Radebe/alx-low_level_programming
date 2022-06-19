@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+/**
+ * main - main
+ * Return: 0
+ */
+int main(void)
+{
+	long prev;
+	long curr;
+	long temp;
+	long i;
+	long sum = 1;
+
+	prev = 1;
+	curr = 2;
+
+	for (i = 1; i < 50; i++)
+	{
+		if (curr % 2 == 0)
+			sum += curr;
+		temp = curr;
+		curr = curr + prev;
+		prev = temp;
+	}
+	printf("%ld\n", sum);
+
+	return (0);
+}
+
