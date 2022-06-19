@@ -10,12 +10,12 @@ int main(void)
 	long curr;
 	long temp;
 	long i;
-	long sum = 1;
+	long sum = 0;
 
 	prev = 1;
 	curr = 2;
 
-	for (i = 1; i < 50; i++)
+	while (curr <= 4000000)
 	{
 		if (curr % 2 == 0)
 			sum += curr;
