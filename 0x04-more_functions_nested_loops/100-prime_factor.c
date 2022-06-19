@@ -2,9 +2,9 @@
 
 int main(void)
 {
-	const long long N = 612852475143;
-	long long num;
-	long long largest = 1;
+	const unsigned long N = 612852475143;
+	unsigned long num;
+	unsigned long largest = 1;
 
 	for (num = 2; num < N; num++)
 	{
@@ -12,7 +12,7 @@ int main(void)
 			largest = num;
 	}
 
-	printf("%lld", largest);
+	printf("%li", largest);
 
 	return (0);
 }
