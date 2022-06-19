@@ -1,14 +1,15 @@
 #include <stdio.h>
 
+
 /**
  * main - main
  * Return: 0
  */
 int main(void)
 {
-	long prev;
-	long curr;
-	long temp;
+	unsigned long long prev;
+	unsigned long long curr;
+	unsigned long long temp;
 	int i;
 
 	printf("1");
@@ -18,9 +19,9 @@ int main(void)
 
 	for (i = 1; i < 98; i++)
 	{
-		printf(", %ld", curr);
+		printf(", %lli", curr);
 		temp = curr;
-		curr = curr + prev;
+		curr += prev;
 		prev = temp;
 	}
 	printf("\n");
