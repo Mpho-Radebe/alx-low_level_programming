@@ -12,13 +12,13 @@ int main(int argc, char **argv)
 	int i;
 	int n;
 	unsigned char *pf;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	
+
 	n = atoi(argv[1]);
 
 	if (n < 0)
