@@ -14,7 +14,7 @@ void print_number(int n)
 		_putchar('0');
 		return;
 	}
-	
+
 	if (n == -2147483648)
 	{
 		_putchar('-');
