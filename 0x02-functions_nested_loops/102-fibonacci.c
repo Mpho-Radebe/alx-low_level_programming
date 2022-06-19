@@ -9,13 +9,14 @@ int main(void)
 	long prev;
 	long curr;
 	long temp;
+	int i;
 
 	printf("1");
 
 	prev = 1;
 	curr = 2;
 
-	for (int i = 1; i < 50; i++)
+	for (i = 1; i < 50; i++)
 	{
 		printf(", %ld", curr);
 		temp = curr;
