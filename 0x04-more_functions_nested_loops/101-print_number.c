@@ -14,6 +14,14 @@ void print_number(int n)
 		_putchar('0');
 		return;
 	}
+	
+	if (n == -2147483648)
+	{
+		_putchar('-');
+		_putchar('2');
+		print_num(147483648);
+		return;
+	}
 
 	if (n < 0)
 	{	_putchar('-');
