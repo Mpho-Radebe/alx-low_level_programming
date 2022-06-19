@@ -9,7 +9,6 @@ int main(void)
 	long prev;
 	long curr;
 	long temp;
-	long i;
 	long sum = 0;
 
 	prev = 1;
