@@ -26,7 +26,7 @@ int count_digits(int n)
  * @n1: number 1
  * @n2: number 2
  * @r: buffer
- * @size_t: buffer size
+ * @size_r: buffer size
  * Return: string
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
