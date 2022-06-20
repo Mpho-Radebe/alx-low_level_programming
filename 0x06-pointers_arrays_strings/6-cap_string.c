@@ -19,7 +19,7 @@ char *cap_string(char *str)
 	{
 		if (*currChar >= 'a' && *currChar <= 'z')
 		{
-			switch (*(currChar - 1))
+			switch (*(currChar - 1) || currChar == str)
 			{
 			case ' ':
 			case '\t':
