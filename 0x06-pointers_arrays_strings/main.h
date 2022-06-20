@@ -6,6 +6,7 @@ char *cap_string(char *str);
 char *string_toupper(char *str);
 char *rot13(char *);
 void print_number(int n);
+void _putchar(char ch);
 /**
  */
 typedef struct rot13_pair
