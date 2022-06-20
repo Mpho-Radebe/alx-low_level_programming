@@ -34,7 +34,7 @@ void print_buffer(char *b, int size)
 			if (i >= size)
 				while ((i - 1) % 10 != 0)
 				{
-					printf("0000 ");
+					printf("     ");
 					i += 2;
 				}
 			for (j = i - ((i - 2) % 10) - 1; j < i && j <= size; j++)
