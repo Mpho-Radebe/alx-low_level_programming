@@ -7,6 +7,8 @@ char *string_toupper(char *str);
 char *rot13(char *);
 void print_number(int n);
 void _putchar(char ch);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
 /**
  */
 typedef struct rot13_pair
