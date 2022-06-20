@@ -24,7 +24,7 @@ void print_buffer(char *b, int size)
 			printf("%02x ", b[i - 1]);
 			i++;
 		}
-		else
+		else if (i % 2 == 0)
 		{
 			printf("00 ");
 			i++;
