@@ -13,23 +13,18 @@ void print_buffer(char *b, int size)
 	if (size <= 0 || b == NULL)
 		putchar('\n');
 	i = 1;
-	while (i < size)
+	while (i <= size)
 	{
 		if ((i - 1) % 10 == 0)
 			printf("%08x: ", i - 1);
 		printf("%02x", b[i - 1]);
 		i++;
-		if (i < size)
+		if (i <= size)
 		{
 			printf("%02x ", b[i - 1]);
 			i++;
 		}
-		else if (i % 2 == 0)
-		{
-			printf("00 ");
-			i++;
-		}
-		if ((i - 1) % 10 == 0 || i >= size)
+		if ((i - 1) % 10 == 0 || i > size)
 		{
 			if (i >= size)
 				while ((i - 1) % 10 != 0)
