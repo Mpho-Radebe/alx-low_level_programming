@@ -19,30 +19,28 @@ char *cap_string(char *str)
 	{
 		if (*currChar >= 'a' && *currChar <= 'z')
 		{
-			switch (*(currChar - 1))
-			{
-			case ' ':
-			case '\t':
-			case '\v':
-			case '\n':
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
+			if (str == currChar)
 				*currChar -= LOWER_UPPER_CASE_DIFF;
-				break;
+			else
+				switch (*(currChar - 1))
+				{
+				case ' ':
+				case '\t':
+				case '\v':
+				case '\n':
+				case ',':
+				case ';':
+				case '.':
+				case '!':
+				case '?':
+				case '"':
+				case '(':
+				case ')':
+				case '{':
+				case '}':
+					*currChar -= LOWER_UPPER_CASE_DIFF;
+					break;
 			}
-		}
-		
-		if (str == currChar)
-		{
-			*currChar -= LOWER_UPPER_CASE_DIFF;
 		}
 
 		currChar++;
