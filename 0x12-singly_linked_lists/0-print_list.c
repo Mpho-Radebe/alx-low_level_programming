@@ -1,6 +1,18 @@
 #include "lists.h"
 
 /**
+ * print_recursive - prints a number
+ * @n: the number
+ */
+void print_recursive(unsigned int n)
+{
+	if (n == 0)
+		return;
+	print_recursive(n / 10);
+	_putchar('0' + n % 10);
+}
+
+/**
  * print_num - prints a number
  * @n: the number
  */
@@ -8,12 +20,8 @@ void print_num(unsigned int n)
 {
 	if (n == 0)
 		_putchar('0');
-
-	while (n != 0)
-	{
-		_putchar('0' + n % 10);
-		n /= 10;
-	}
+	else
+		print_recursive(n);
 }
 
 /**
@@ -45,7 +53,6 @@ size_t print_list(const list_t *h)
 {
 	if (h == NULL)
 		return (0);
-
 	_putchar('[');
 	print_num(h->len);
 	_putchar(']');
