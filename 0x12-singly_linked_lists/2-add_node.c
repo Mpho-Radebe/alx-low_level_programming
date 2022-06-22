@@ -19,12 +19,16 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		newNode->len = strlen(str);
 		newNode->str = malloc(sizeof(char) * (newNode->len + 1));
+		newNode->next = *head;
+		*head = newNode;
 	}
 
 	if (newNode == NULL || newNode->str == NULL)
 	{
 		if (*head == NULL)
+		{
 			return (NULL);
+		}
 		curr_node = *head;
 		while (curr_node->next != NULL)
 		{
@@ -33,17 +37,14 @@ list_t *add_node(list_t **head, const char *str)
 			free(curr_node->str);
 			free(temp_node);
 		}
-		free(curr_node->str);
+		if (curr_node->str != NULL)
+			free(curr_node->str);
 		free(curr_node);
 		return (NULL);
 	}
 
 	for (i = 0; i <= newNode->len; i++)
 		newNode->str[i] = str[i];
-
-	newNode->next = *head;
-
-	*head = newNode;
 
 	return (newNode);
 }
