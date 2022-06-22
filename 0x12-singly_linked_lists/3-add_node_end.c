@@ -31,7 +31,7 @@ list_t *add_node_end(list_t **head, const char *str)
 			free(tempNode->str);
 			free(tempNode);
 		}
-		if (newNode->str != NULL)
+		if (newNode != NULL && newNode->str != NULL)
 			free(newNode->str);
 		if (newNode != NULL)
 			free(newNode);
