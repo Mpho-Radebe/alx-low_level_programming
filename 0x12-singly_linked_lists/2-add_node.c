@@ -33,6 +33,7 @@ list_t *add_node(list_t **head, const char *str)
 			free(curr_node->str);
 			free(temp_node);
 		}
+		free(curr_node->str);
 		free(curr_node);
 		return (NULL);
 	}
