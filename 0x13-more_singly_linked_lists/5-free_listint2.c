@@ -1,5 +1,5 @@
 #include "lists.h"
-#incldue <stdlib.h>
+#include <stdlib.h>
 
 /**
  * free_listint - deallocates memory for a list
