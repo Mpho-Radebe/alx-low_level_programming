@@ -20,7 +20,7 @@ void free_listint_(listint_t *head)
  */
 void free_listint2(listint_t **head)
 {
-	if (head == NULL)
+	if (head != NULL)
 	{
 		free_listint_(*head);
 		*head = NULL;
