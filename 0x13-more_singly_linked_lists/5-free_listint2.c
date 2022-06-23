@@ -9,7 +9,7 @@ void free_listint_(listint_t *head)
 {
 	if (head != NULL)
 	{
-		free_listint(head->next);
+		free_listint_(head->next);
 		free(head);
 	}
 }
