@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_listint - deallocates memory for a list
+ * free_listint_ - deallocates memory for a list
  * @head: list
  */
 void free_listint_(listint_t *head)
@@ -20,7 +20,10 @@ void free_listint_(listint_t *head)
  */
 void free_listint2(listint_t **head)
 {
-	free_listint_(*head);
-	*head = NULL;
+	if (head == NULL)
+	{
+		free_listint_(*head);
+		*head = NULL;
+	}
 }
 
