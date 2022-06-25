@@ -13,7 +13,7 @@ listint_t *find_listint_loop(listint_t *head)
 	while (cursor2 != NULL)
 	{
 		cursor1 = head;
-		while (cursor1 != cursor2)
+		while (cursor1 != head || cursor1 != cursor2)
 		{
 			if (cursor1 == cursor2->next)
 				return (cursor1);
