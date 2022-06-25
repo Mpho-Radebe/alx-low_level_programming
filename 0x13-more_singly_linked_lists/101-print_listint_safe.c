@@ -67,7 +67,7 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 	}
 
-	if (traversed != NULL)
+	while (traversed != NULL)
 	{
 		delete_node = traversed;
 		traversed = traversed->next;
