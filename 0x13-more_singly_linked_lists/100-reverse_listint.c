@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 /**
  * reverse_listint - reverses the a list
  * @head: the list
@@ -10,30 +9,25 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *left = *head;
-	listint_t *right = *head;
-	listint_t *temp_ptr = NULL;
-	int temp;
+	listint_t *next = (*head)->next;
+	listint_t *prev = *head;
+	listint_t *next_next;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL || *head  == NULL)
 		return (NULL);
 
-	while (right->next != NULL)
-		right = right->next;
-	while (right != left && right->next != left)
+	if ((*head)->next == NULL)
+		return (*head);
+
+	while (next != NULL)
 	{
-		temp = right->n;
-		right->n = left->n;
-		left->n = temp;
-
-		left = left->next;
-
-		temp_ptr = *head;
-		while (temp_ptr->next != right)
-			temp_ptr = temp_ptr->next;
-		right = temp_ptr;
+		next_next = next->next;
+		next->next = prev;
+		prev = next;
+		next = next_next;
 	}
 
-	return *head;
+	(*head)->next = NULL;
+	*head = prev;
+	return (*head);
 }
-
