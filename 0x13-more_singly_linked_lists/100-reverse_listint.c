@@ -30,7 +30,7 @@ listint_t *reverse_listint(listint_t **head)
 		temp_ptr = *head;
 		while (temp_ptr->next != right)
 			temp_ptr = temp_ptr->next;
-		right = temp_tr;
+		right = temp_ptr;
 	}
 
 	return *head;
