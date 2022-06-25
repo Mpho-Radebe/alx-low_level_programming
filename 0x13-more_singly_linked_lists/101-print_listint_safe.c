@@ -31,7 +31,7 @@ listint_t *add_nodeint_(listint_t **head, const int n)
  * @e: search element
  * Return: integer
  */
-int find(listint_t* list, const int e)
+int find(listint_t *list, const int e)
 {
 	while (list != NULL)
 	{
@@ -39,7 +39,7 @@ int find(listint_t* list, const int e)
 			return (1);
 		list = list->next;
 	}
-	
+
 	return (0);
 }
 
@@ -51,8 +51,8 @@ int find(listint_t* list, const int e)
 size_t print_listint_safe(const listint_t *head)
 {
 	int count = 0;
-	listint_t* traversed = NULL;
-	listint_t* delete_node;
+	listint_t *traversed = NULL;
+	listint_t *delete_node;
 
 	while (head != NULL)
 	{
@@ -74,5 +74,5 @@ size_t print_listint_safe(const listint_t *head)
 		free(delete_node);
 	}
 
-	return count;
+	return (count);
 }
