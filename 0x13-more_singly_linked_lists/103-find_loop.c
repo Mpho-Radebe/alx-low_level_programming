@@ -16,6 +16,9 @@ listint_t *find_listint_loop(listint_t *head)
 		cursor2 = head->next;
 	}
 
+	if (cursor1 == cursor2)
+		return (cursor1);
+
 	while (cursor2 != NULL)
 	{
 		cursor1 = head;
