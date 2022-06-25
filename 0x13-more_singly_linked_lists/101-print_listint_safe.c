@@ -52,6 +52,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	int count = 0;
 	listint_t* traversed = NULL;
+	listint_t* delete_node;
 
 	while (head != NULL)
 	{
@@ -64,6 +65,13 @@ size_t print_listint_safe(const listint_t *head)
 		add_nodeint_(&traversed, (unsigned long)head);
 		head = head->next;
 		count++;
+	}
+
+	if (traversed != NULL)
+	{
+		delete_node = traversed;
+		traversed = traversed->next;
+		free(delete_node);
 	}
 
 	return count;
