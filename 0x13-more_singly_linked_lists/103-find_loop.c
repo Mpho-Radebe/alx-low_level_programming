@@ -7,13 +7,19 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *cursor1 = head;
-	listint_t *cursor2 = head;
+	listint_t *cursor1 = NULL;
+	listint_t *cursor2 = NULL;
+
+	if (head != NULL)
+	{
+		cursor1 = head;
+		cursor2 = head->next;
+	}
 
 	while (cursor2 != NULL)
 	{
 		cursor1 = head;
-		while (cursor1 == head || cursor1 != cursor2)
+		while (cursor1 != cursor2)
 		{
 			if (cursor1 == cursor2->next)
 				return (cursor1);
