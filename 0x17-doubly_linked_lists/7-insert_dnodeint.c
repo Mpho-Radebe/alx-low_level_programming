@@ -3,6 +3,7 @@
 
 /**
  * insert_dnodeint_at_index - inserts a node
+ * @h: the head of the list
  * @idx: the index
  * @n: new element
  * Return: the new node
@@ -24,7 +25,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 
 	new = malloc(sizeof(dlistint_t));
-	
+
 	if (new == NULL)
 	{
 		head = *h;
@@ -39,7 +40,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 	new->next = head;
 	new->prev = head->prev;
-	head->prev= new;
+	head->prev = new;
 
 	if (new->prev != NULL)
 		new->prev->next = new;
