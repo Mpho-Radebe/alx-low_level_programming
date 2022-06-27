@@ -28,8 +28,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	new = malloc(new_size);
 	if (new == NULL)
+	{
+		free(ptr);
 		return (NULL);
-
+	}
 	for (i = 0; i < old_size && i < new_size; i++)
 		((char *)(new))[i] = ((char *)(ptr))[i];
 
