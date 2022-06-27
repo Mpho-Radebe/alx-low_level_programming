@@ -12,6 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1;
 	unsigned int len2;
+	unsigned int max_len;
 	char *result;
 	unsigned int i;
 
@@ -23,11 +24,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 
+	max_len = len2 > n ? len1 + len2 : len1 + n;
+
 	if (len1 == 0 && len2 == 0)
 		return (NULL);
 
-	result = malloc(sizeof(char) * (len1 + len2) + 1);
-	result[len1 + len2] = '\0';
+	result = malloc(sizeof(char) * (max_len + 1));
+	result[max_len] = '\0';
 
 	if (result == NULL)
 		return (NULL);
