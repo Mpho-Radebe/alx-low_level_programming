@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
 	if (!isdigits(argv[1]) || !isdigits(argv[2]))
 	{
-		printf("2. Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 
