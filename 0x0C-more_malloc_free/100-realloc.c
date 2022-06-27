@@ -3,9 +3,10 @@
 
 /**
  * _realloc - reallocates
+ * @ptr: original pointer
  * @old_size: old size
  * @new_size: new size
- * Return: poiner
+ * Return: pointer
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -16,9 +17,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 
 	if (new_size == 0)
-		return (NULL);
-
-	if (new_size == 0)
 	{
 		if (ptr != NULL)
 			free(ptr);
@@ -26,9 +24,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	if (ptr == NULL)
-	{
 		return (malloc(new_size));
-	}
 
 	new = malloc(new_size);
 	if (new == NULL)
